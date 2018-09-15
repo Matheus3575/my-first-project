@@ -7,11 +7,14 @@
             <h1><a href="/">Blog Matheusão</a></h1>
         </div>
 
+
+        {% for post in posts %}
         <div>
             <p>Deixa o menino rodaaaaar</p>
-            <h2><a href="">Meu primeiro post</a></h2>
-            <p>Oi eu sou goku quem é você?</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
+        {% endfor %}
 
         <div>
             <p>Viu mathias consegui até agora :D</p>
